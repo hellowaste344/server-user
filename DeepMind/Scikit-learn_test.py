@@ -7,6 +7,7 @@ from sklearn import metrics
 
 # Load data
 iris = load_iris()
+print(iris.target_names)
 x = iris.data
 y = iris.target
 
@@ -63,7 +64,6 @@ print("encoded feature:", encoded_feature)
 
 # one-hot encoding
 from sklearn.preprocessing import OneHotEncoder
-import numpy as np
 
 categorical_feature = ['cat', 'dog', 'dog', 'cat', 'bird']
 
