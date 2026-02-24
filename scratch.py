@@ -1,8 +1,10 @@
-data = {
-    "name": "Ashe",
-    "age": 20,
-    "ip": "0.0.0.0"
-}
-import json
-print(json.dumps(data))
-print(json.loads(data))
+class Car:
+    def __init__(self, model, year):
+        self.model = model
+        self.year = year
+
+    def get_model(self):
+        return self.model
+
+
+print(Car("Toyota", 2022).get_model())
