@@ -1,10 +1,16 @@
-class Car:
-    def __init__(self, model, year):
-        self.model = model
-        self.year = year
+import os
 
-    def get_model(self):
-        return self.model
+from rich.console import Console
+from rich.panel import Panel
 
-
-print(Car("Toyota", 2022).get_model())
+if __name__ == "__main__":
+    print(os.system("whoami"))
+    print(os.environ.get("TERMINAL"))
+    console = Console()
+    console.print(
+        Panel.fit(
+            "[bold green]🤖 Voice-Enabled AI Agent[/bold green]\n"
+            "[dim]Orchestrator-first · GPT-4o · Playwright · Wikipedia · Gmail[/dim]",
+            border_style="green",
+        )
+    )
