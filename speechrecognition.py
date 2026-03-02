@@ -1,6 +1,8 @@
 import speech_recognition as sr
 
 r = sr.Recognizer()
+r.energy_threshold = 300
+r.pause_threshold = 1.5
 
 with sr.Microphone() as source:
     print("Say sth\n")
@@ -9,5 +11,5 @@ with sr.Microphone() as source:
 
     try:
         print("text: ", r.recognize_google(audio_text))
-    except:
-        print("Sorry, I did not get that")
+    except Exception as exc:
+        print(f"Sorry, I did not get that {exc}")

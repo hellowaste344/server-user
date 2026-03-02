@@ -4,7 +4,14 @@ engine = pyttsx3.init()
 
 # VOICE
 voices = engine.getProperty("voices")
-engine.setProperty("voice", voices[0].id)  # index 0 male 1 female
+for index, voice in enumerate(voices):
+    print(f"Index {index}")
+    print(f"Name {voice.name}")
+    print(f"ID {voice.id}")
+    print(f"Gender {voice.gender}")
+    print("*" * 10)
+
+engine.setProperty("voice", voices)
 
 engine.say("Hi, I am Samantha")
 engine.runAndWait()
@@ -18,7 +25,7 @@ print(rate)
 
 
 # VOLUME
-engine.setProperty("volume", 2)
+engine.setProperty("volume", 1)
 volume = engine.getProperty("volume")
 print(volume)
 
@@ -29,7 +36,7 @@ engine.runAndWait()
 engine.stop()
 
 engine.save_to_file(
-    "Welcome to My Darkness",
+    "Super Computers Can Change The World",
     "test.mp3",
 )
 

@@ -9,8 +9,8 @@ for subdir in p.iterdir():
 
 py_files = p.rglob("*.py")
 
-# for f in py_files:
-# print(f)
+for f in py_files:
+    print(f)
 
 sf = p / "users.db"
 print(sf)
